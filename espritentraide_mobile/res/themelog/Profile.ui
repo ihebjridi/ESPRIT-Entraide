@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="Profile" cloudDestinationProperty="Profile" uiid="Formsignup" layout="BoxLayout" boxLayoutAxis="Y" >
+  <component type="Container" name="Container1" cloudDestinationProperty="Container" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="0" >
+    <component type="Label" name="image" cloudDestinationProperty="Label" text="" >
+    </component>
+  </component>
+  <component type="Container" name="Container1" cloudDestinationProperty="Container1" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="4" >
+    <component type="Container" name="Container2" cloudDestinationProperty="Container2" layout="BoxLayout" boxLayoutAxis="Y" >
+      <component type="Label" name="nom" cloudDestinationProperty="nom" uiid="Label1" focusable="false" text="" >
+      </component>
+      <component type="Label" name="email" cloudDestinationProperty="email" uiid="Label1" text="" >
+      </component>
+      <component type="Label" name="age" cloudDestinationProperty="age" uiid="Label1" text="" >
+      </component>
+      <component type="Label" name="phone" cloudDestinationProperty="phone" uiid="Label1" text="" >
+      </component>
+    </component>
+  </component>
+  <component type="Button" name="UpdateProfile" cloudDestinationProperty="UpdateProfile" text="Modfier mon profil" >
+  </component>
+</component>

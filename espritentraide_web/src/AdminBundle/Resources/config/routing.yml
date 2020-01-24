@@ -1,0 +1,45 @@
+admin_dashboard:
+    path:     /cpanel
+    defaults: { _controller: AdminBundle:Default:adminDash }
+admin_Cov:
+    path:     /cpanel/covoiturage
+    defaults: { _controller: AdminBundle:Default:adminCov }
+admin_Op:
+    path:     /cpanel/objet-perdu
+    defaults: { _controller: AdminBundle:Default:adminOp }
+admin_Event:
+    path:     /cpanel/evenement
+    defaults: { _controller: AdminBundle:Default:adminEvent }
+admin_Tuto:
+    path:     /cpanel/tutorat
+    defaults: { _controller: AdminBundle:Default:adminTuto }
+admingetall:
+    path:     /admingetall
+    defaults: { _controller: AdminBundle:Default:getall }
+admingetLostFoundAction:
+    path:     /admingetLostFoundAction
+    defaults: { _controller: AdminBundle:Default:getLostFound }
+admingetEvent:
+    path:     /admingetEvent
+    defaults: { _controller: AdminBundle:Default:getEvent }
+adminCancelEvent:
+    path:     /adminCancelEvent
+    defaults: { _controller: AdminBundle:Default:CancelEvent }
+adminAcceptEvent:
+    path:     /adminAcceptEvent
+    defaults: { _controller: AdminBundle:Default:AcceptEvent }
+adminAcceptAds:
+    path:     /adminAcceptAds
+    defaults: { _controller: AdminBundle:Default:AcceptAdsOp }
+adminCancelAds:
+    path:     /adminCancelAds
+    defaults: { _controller: AdminBundle:Default:CancelAdsOp }
+admingetLostFoundActionAtt:
+    path:     /admingetLostFoundActionAtt
+    defaults: { _controller: AdminBundle:Default:LostFoundActionAtt }
+admingetLostFoundActionPub:
+    path:     /admingetLostFoundActionPub
+    defaults: { _controller: AdminBundle:Default:getLostFoundActionPub }
+admingetLostFoundActionAnnule:
+    path:     /admingetLostFoundActionAnnule
+    defaults: { _controller: AdminBundle:Default:getLostFoundActionAnnule }

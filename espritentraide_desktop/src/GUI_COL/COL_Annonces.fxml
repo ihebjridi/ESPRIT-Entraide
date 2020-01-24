@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI_COL.COL_AnnoncesController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="944.0">
+         <children>
+            <AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="942.0">
+               <children>
+                  <AnchorPane layoutX="-1.0" prefHeight="500.0" prefWidth="251.0" style="-fx-background-color: #cd2122;">
+                     <children>
+                        <JFXButton fx:id="btn_all" buttonType="RAISED" layoutY="141.0" onAction="#All_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Toutes les annonces" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView fitHeight="71.0" fitWidth="208.0" layoutX="22.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Resources/logo-white.png" />
+                           </image>
+                        </ImageView>
+                        <Separator layoutX="25.0" layoutY="118.0" prefWidth="200.0" style="-fx-background-color: #fff;" />
+                        <JFXButton fx:id="btn_annonce" buttonType="RAISED" layoutY="188.0" onAction="#AllAnnonces_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Les annonces de colocation" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_demande" buttonType="RAISED" layoutX="1.0" layoutY="235.0" onAction="#AllDemandes_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Les demandes de colocation" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_mesAds" buttonType="RAISED" layoutX="1.0" layoutY="282.0" onAction="#MyAds_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Mes annonces" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_mesDmd" buttonType="RAISED" layoutX="1.0" layoutY="329.0" onAction="#MyDmd_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Mes demandes" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_AddAds" buttonType="RAISED" layoutX="1.0" layoutY="376.0" onAction="#AddAds_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Ajouter une annonce" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_AddDmd" buttonType="RAISED" layoutX="1.0" layoutY="423.0" onAction="#AddDmd_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Ajouter une demande" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="250.0" layoutY="68.0" prefHeight="84.0" prefWidth="682.0" style="-fx-background-color: #7e7e7e;">
+                     <children>
+                        <JFXTextField fx:id="search" focusColor="#ffffff00" layoutX="140.0" layoutY="17.0" prefHeight="32.0" prefWidth="361.0" promptText="Chercher ...." unFocusColor="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </JFXTextField>
+                        <ImageView layoutX="93.0" layoutY="18.0">
+                           <image>
+                              <Image url="@../Resources/Search%20Property_32px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Text layoutX="283.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Collocation">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="905.0" layoutY="10.0" onMouseClicked="#Close_action" style="-fx-cursor: &quot;hand&quot;;" text="X">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="366.0" layoutY="41.0" text="les annonces">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="table" layoutX="258.0" layoutY="159.0" prefHeight="330.0" prefWidth="667.0">
+                     <columns>
+                        <TableColumn fx:id="user" prefWidth="104.0" text="Utilisateur" />
+                        <TableColumn fx:id="title" prefWidth="97.0" text="Title" />
+                        <TableColumn fx:id="description" prefWidth="233.0" text="Description" />
+                        <TableColumn fx:id="type" minWidth="0.0" prefWidth="112.0" text="Type" />
+                        <TableColumn fx:id="created_at" prefWidth="119.0" text="Cree le" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

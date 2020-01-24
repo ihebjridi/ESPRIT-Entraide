@@ -1,0 +1,18 @@
+index_homepage:
+    path:     /
+    defaults: { _controller: IndexBundle:Default:index }
+espritien_settingpage:
+    path:     /settings
+    defaults: { _controller: IndexBundle:Default:settings }
+Esprit_col:
+    path:     /collocationa
+    defaults: { _controller: IndexBundle:Default:espritienCol }
+Esprit_cova:
+    path:     /covoituragea
+    defaults: { _controller: IndexBundle:Default:espritienCov }
+Esprit_tuto:
+    path:     /tutorata
+    defaults: { _controller: IndexBundle:Default:espritienTuto }
+Esprit_event:
+    path:     /evenementa
+    defaults: { _controller: IndexBundle:Default:espritienEvent }

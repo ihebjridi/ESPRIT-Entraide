@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="reset" cloudDestinationProperty="reset" uiid="Formreset" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="4" >
+  <component type="Container" name="Container2" cloudDestinationProperty="Container2" layout="BoxLayout" boxLayoutAxis="Y" >
+    <component type="Container" name="Container1" cloudDestinationProperty="Container1" layout="BoxLayout" boxLayoutAxis="Y" >
+      <component type="Container" name="Container3" cloudDestinationProperty="Container3" layout="BoxLayout" boxLayoutAxis="Y" >
+        <component type="Label" name="Label" cloudDestinationProperty="Label" text="Nouveau mot de passe" >
+        </component>
+        <component type="TextField" name="password" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" >
+        </component>
+      </component>
+    </component>
+    <component type="Container" name="Container" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="Y" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" text="R&#xe9;p&#xe9;ter le mot de passe" >
+      </component>
+      <component type="TextField" name="password1" cloudBoundProperty="text" cloudDestinationProperty="email" text="" >
+      </component>
+      <component type="Button" name="envoyer" cloudDestinationProperty="envoyer" text="R&#xe9;installer mon mot de passe " >
+      </component>
+    </component>
+  </component>
+</component>

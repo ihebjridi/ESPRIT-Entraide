@@ -1,0 +1,66 @@
+lost_object_homepage:
+    path:     /l
+    defaults: { _controller: LostObjectBundle:Default:index }
+Mesannonce_page:
+    path:     /objet-perdu/mes-annonces
+    defaults: { _controller: LostObjectBundle:Default:annonce }
+Mesdemandes_page:
+    path:     /objet-perdu/mes-demandes
+    defaults: { _controller: LostObjectBundle:Default:demande }
+uploadimagefake:
+    path:     /upload_url
+    defaults: { _controller: LostObjectBundle:Default:upload }
+add_request_OP:
+    path:     /add_request_OP
+    defaults: { _controller: LostObjectBundle:Default:addRequest }
+add_ads_OP:
+    path:     /add_ads_OP
+    defaults: { _controller: LostObjectBundle:Default:addAds }
+update_adsById:
+    path:     /update_adsById
+    defaults: { _controller: LostObjectBundle:Default:updateadsById }
+get_OP:
+    path:     /get_op
+    defaults: { _controller: LostObjectBundle:Default:list }
+get_adsById:
+    path:     /get_adsById
+    defaults: { _controller: LostObjectBundle:Default:getadsById }
+get_annonce:
+    path:     /get_annonce
+    defaults: { _controller: LostObjectBundle:Default:listannonce }
+cancel_ads:
+    path:     /cancel_ads
+    defaults: { _controller: LostObjectBundle:Default:cancelannonce }
+get_demande:
+    path:     /get_demande
+    defaults: { _controller: LostObjectBundle:Default:listdemande }
+sava_picture:
+    path:     /save_picture
+    defaults: { _controller: LostObjectBundle:Default:savePicture }
+Esprit_op:
+    path:     /objet-perdu
+    defaults: { _controller: LostObjectBundle:Default:espritienOp }
+Esprit_op_my_ads:
+    path:     /op_my_ads
+    defaults: { _controller: LostObjectBundle:Default:myads }
+Esprit_op_my_Dmd:
+    path:     /op_my_dmd
+    defaults: { _controller: LostObjectBundle:Default:mydemande }
+get_demande_attente:
+    path:     /get_demande_attente
+    defaults: { _controller: LostObjectBundle:Default:getdemandeattente }
+add_favoris:
+    path:     /add_favoris
+    defaults: { _controller: LostObjectBundle:Default:add_favoris}
+set_favoris:
+    path:     /set_favoris
+    defaults: { _controller: LostObjectBundle:Default:set_favoris}
+favorisOP_page:
+    path:     /annonce/favoris
+    defaults: { _controller: LostObjectBundle:Default:favorispage}
+cancelFavoris:
+    path:     /cancelFavoris/{idfavoris}
+    defaults: { _controller: LostObjectBundle:Default:cancelFavoris}
+searchAjaxFav:
+    path:     /searchAjaxFav
+    defaults: { _controller: LostObjectBundle:Default:searchAjaxFav}

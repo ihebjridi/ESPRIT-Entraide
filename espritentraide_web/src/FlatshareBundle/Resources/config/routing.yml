@@ -1,0 +1,3 @@
+flatshare_homepage:
+    path:     /s
+    defaults: { _controller: FlatshareBundle:Default:index }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>Esprit Entre'aide®</title>
+
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Main Font -->
+    <script src="{{ asset('js/webfontloader.min.js') }}"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap-reboot.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap-grid.css') }}">
+
+    <!-- Main Styles CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/fonts.min.css') }}">
+
+
+</head>
+
+<body class="body-bg-white" id="top">
+<div class="landing-page">
+    <div class="content-bg-wrap" style="filter: inherit !important;">
+        <div class="content-bg"></div>
+    </div>
+
+    <div class="container">
+        <div class="row display-flex" style="padding-top: 75px !important;padding-bottom: 75px !important;">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="landing-content">
+                    <a href="{{ path('index_homepage') }}"><img style="max-width: 44%;" src="{{ asset('img/logo-white.png') }}" alt="Esprit Entr'aide">
+                    </a>
+                    <h2>Connectez-vous à Esprit Entr'aide pour commencer à partager et communiquer avec les espritiens.</h2>
+
+
+
+                </div>
+            </div>
+
+            <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12" >
+
+                <!-- Login-Registration Form  -->
+
+
+                <div class="registration-login-form" style="padding-left: 2px;">
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home" role="tabpanel" data-mh="log-tab">
+
+                            <div class="title h6">Se connecter à Esprit Entr'aide</div>
+                            {% trans_default_domain 'FOSUserBundle' %}
+
+
+
+                            <form class="content"  name="form_login" action="{{ path("fos_user_security_check") }}" method="post">
+
+                                {% if error %}
+                                    <div class="alert alert-danger" >{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                {% endif %}
+                                {% if csrf_token %}
+                                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                                {% endif %}
+                                <div class="row">
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group label-floating is-empty">
+                                            <input  class="form-control" placeholder="Nom & Prénom" type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+
+                                        <div class="form-group label-floating is-empty">
+                                            <input class="form-control"  placeholder="Password" type="password" id="password" name="_password" required="required" autocomplete="current-password" />
+                                        </div>
+
+
+
+                                        <input class="btn btn-purple btn-lg full-width" style="cursor: pointer;" type="submit" id="_submit" name="_submit" value="Connexion!" />
+
+
+
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane" id="profile" role="tabpanel" data-mh="log-tab">
+                            <div class="title h6">Connectez-vous a votre compte</div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ... end Login-Registration Form  -->        </div>
+        </div>
+
+    </div>
+    <img class="img-bottom" style="bottom: 0 !important;    position: absolute;   left: 50%; transform: translate(-50%,0);   margin: 0 !important;" src="{{ asset('img/group-bottom.png') }}" alt="friends">
+</div>
+
+
+<!-- JS Scripts -->
+{% include  ('IndexBundle:public:communFiles.html.twig') %}
+
+</body>
+</html>

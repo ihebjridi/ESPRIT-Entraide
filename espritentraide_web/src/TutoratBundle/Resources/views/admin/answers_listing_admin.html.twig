@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="ui-block responsive-flex">
+
+                <div class="ui-block-title">
+                    <h1>Valider les réponses</h1>
+                </div>
+                <div >
+    <table class="forums-table">
+        <thead>
+            <tr>
+                <th>Author</th>
+                <th>Answer submitted</th>
+                <th>Corresponding question</th>
+                <th>Valid answer ?</th>
+                    
+            </tr>
+        </thead>
+        <tbody>
+        {% for answer in pagination %}
+            <tr>
+                <td>{{ answer.user.username }}</td>
+                <td>{{ answer.content }}</td>
+                <td>{{ answer.question.title }}</td>
+                <td><a href="{{ path('answer_valid', { id: answer.id }) }}">{{ answer.valid ? 'Yes' : 'No' }}</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+                </div>
+
+    <div class="pagination">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

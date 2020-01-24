@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DashboardController">
+   <children>
+      <AnchorPane prefHeight="197.0" prefWidth="907.0" style="-fx-background-color: #cd2122;">
+         <children>
+            <Text fill="WHITE" layoutX="336.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tableau de bord" textAlignment="CENTER" wrappingWidth="541.4169921875">
+               <font>
+                  <Font name="SansSerif Regular" size="30.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="73.0" fitWidth="208.0" layoutX="63.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/logo-white.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="438.0" layoutY="130.0">
+               <image>
+                  <Image url="@../Resources/Home_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="864.0" layoutY="11.0" onMouseClicked="#Close_action">
+               <image>
+                  <Image url="@../Resources/Close%20Window_32px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btn_lo" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="206.0" layoutY="260.0" onAction="#LostObject_action" prefHeight="71.0" prefWidth="95.0" style="-fx-background-color: #cd2122;" text="Objet-perdu" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView layoutX="238.0" layoutY="270.0">
+         <image>
+            <Image url="@../Resources/Lost%20and%20Found_32px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="btn_col" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="206.0" layoutY="370.0" onAction="#Col_action" prefHeight="71.0" prefWidth="95.0" style="-fx-background-color: #cd2122;" text="Colocation" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView layoutX="238.0" layoutY="381.0">
+         <image>
+            <Image url="@../Resources/Apartment_32px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="btn_cov" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="401.0" layoutY="260.0" onAction="#Cov_Action" prefHeight="71.0" prefWidth="95.0" style="-fx-background-color: #cd2122;" text="Covoiturage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView layoutX="433.0" layoutY="270.0">
+         <image>
+            <Image url="@../Resources/Traffic%20Jam_32px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="401.0" layoutY="370.0" prefHeight="71.0" prefWidth="95.0" style="-fx-background-color: #cd2122;" text="Tutorat" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView layoutX="433.0" layoutY="381.0">
+         <image>
+            <Image url="@../Resources/Helping%20Hand_32px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="601.0" layoutY="260.0" onAction="#evenementAction" prefHeight="71.0" prefWidth="95.0" style="-fx-background-color: #cd2122;" text="Événement" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView layoutX="633.0" layoutY="270.0">
+         <image>
+            <Image url="@../Resources/Event_32px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="601.0" layoutY="370.0" prefHeight="71.0" prefWidth="95.0" style="-fx-background-color: #cd2122;" text="Paramètre" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView layoutX="633.0" layoutY="381.0">
+         <image>
+            <Image url="@../Resources/Settings_32px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

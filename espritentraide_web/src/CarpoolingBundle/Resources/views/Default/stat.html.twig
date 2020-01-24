@@ -1,0 +1,13 @@
+{% extends "CarpoolingBundle:Default:layoutAdmin.html.twig" %}
+{% block content %}
+<html>
+<head></head>
+<body>
+<div id="div_chart"></div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js" ></script>
+    <script>
+        {{ gc_draw(piechart,'div_chart') }}
+    </script>
+</body>
+</html>
+{% endblock %}

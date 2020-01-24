@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LO_sendMailController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="900.0">
+         <children>
+            <AnchorPane prefHeight="500.0" prefWidth="251.0" style="-fx-background-color: #cd2122;">
+               <children>
+                  <JFXButton fx:id="btn_all" buttonType="RAISED" layoutY="141.0" onAction="#All_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Toutes les annonces" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fx:id="logo" fitHeight="71.0" fitWidth="208.0" layoutX="22.0" layoutY="54.0" onMouseClicked="#logo_action" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/logo-white.png" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutX="25.0" layoutY="118.0" prefWidth="200.0" style="-fx-background-color: #fff;" />
+                  <JFXButton fx:id="btn_perdu" buttonType="RAISED" layoutY="188.0" onAction="#AllPerdu_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Les objets perdus" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_trouve" buttonType="RAISED" layoutX="1.0" layoutY="235.0" onAction="#AllFound_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Les objets trouves" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_mesAds" buttonType="RAISED" layoutX="1.0" layoutY="282.0" onAction="#MyAds_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Mes annonces" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_mesDmd" buttonType="RAISED" layoutX="1.0" layoutY="329.0" onAction="#MyDmd_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Mes demandes" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_AddAds" buttonType="RAISED" layoutX="1.0" layoutY="376.0" onAction="#AddAds_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Ajouter une annonce" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_AddDmd" buttonType="RAISED" layoutX="1.0" layoutY="423.0" onAction="#AddDmd_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Ajouter une demande" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <Text layoutX="284.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Objet-perdu">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <Label layoutX="367.0" layoutY="41.0" text="Envoyer un mail">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="326.0" layoutY="136.0" prefHeight="19.0" prefWidth="156.0" text="Envoyer à :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="326.0" layoutY="231.0" text="Contenu :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="sendTo" layoutX="515.0" layoutY="132.0" prefHeight="25.0" prefWidth="208.0" />
+            <JFXButton fx:id="send" buttonType="RAISED" layoutX="723.0" layoutY="381.0" onAction="#Btnsend_action" prefHeight="39.0" prefWidth="108.0" style="-fx-background-color: #cd2122;" text="Envoyer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextArea fx:id="contenu" layoutX="515.0" layoutY="246.0" prefHeight="79.0" prefWidth="208.0" />
+            <Text fx:id="msgerr1" fill="RED" layoutX="515.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Champs obligatoire*" visible="false" />
+            <Text fx:id="msgerr2" fill="RED" layoutX="515.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Champs obligatoire*" visible="false" />
+            <Label layoutX="325.0" layoutY="177.0" prefHeight="19.0" prefWidth="156.0" text="Sujet        :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="subject" layoutX="514.0" layoutY="173.0" prefHeight="25.0" prefWidth="208.0" />
+            <Text fx:id="msgerr3" fill="RED" layoutX="515.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Champs obligatoire*" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

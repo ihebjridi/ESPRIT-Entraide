@@ -1,0 +1,61 @@
+{% extends "CarpoolingBundle:Default:layout.html.twig" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+            <div class="ui-block">
+
+
+                <!-- Forums Table -->
+                {{ form_start(form) }}
+
+                <table class="forums-table" id="opTable">
+
+                    <thead>
+
+                    <tr>
+
+                        <th class="forum">
+                            Titre de l'annonce
+                        </th>
+
+
+                        <th class="freshness">
+                           contenu
+                        </th>
+                        <th class="freshness">
+
+                        </th>
+
+
+
+
+
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+                    <td> {{ form_widget (form.title) }}</td>
+                    <td> {{ form_widget(form.description) }}</td>
+                    <td>{{ form_widget(form.save) }}</td>
+
+
+                    </tbody>
+                </table>
+                {{ form_end(form) }}
+
+                <!-- ... end Forums Table -->
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

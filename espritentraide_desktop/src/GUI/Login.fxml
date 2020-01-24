@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #211714;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginController">
+   <children>
+      <AnchorPane layoutX="499.0" layoutY="52.0" prefHeight="395.0" prefWidth="355.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <JFXButton fx:id="cnx" buttonType="RAISED" layoutX="70.0" layoutY="279.0" onAction="#seConnecter_action" prefHeight="34.0" prefWidth="226.0" style="-fx-background-color: #cd2122; -fx-cursor: 'hand';" text="Se connecter" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="username_field" focusColor="#45b86b" layoutX="70.0" layoutY="155.0" prefHeight="25.0" prefWidth="226.0" promptText="Nom d'utilisateur" unFocusColor="#ccc6c6" />
+            <JFXPasswordField fx:id="password_field" focusColor="#45b86b" layoutX="71.0" layoutY="208.0" prefHeight="25.0" prefWidth="226.0" promptText="Mot de passe" unFocusColor="#ccc6c6" />
+            <Label layoutX="60.0" layoutY="53.0" text="Se connecter à Esprit Entr'aide">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <Text fx:id="msgerreur" fill="RED" layoutX="71.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid credentials." visible="false" />
+            <Text fx:id="nullErr" fill="RED" layoutX="71.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Champs vide." visible="false" />
+            <JFXButton fx:id="auth" buttonType="RAISED" layoutX="70.0" layoutY="326.0" onAction="#authUser" prefHeight="34.0" prefWidth="226.0" style="-fx-background-color: #3b5997; -fx-cursor: 'hand';" text="     Se connecter avec Facebook" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView layoutX="74.0" layoutY="327.0">
+               <image>
+                  <Image url="@../Resources/Facebook_32px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-2.0" opacity="0.88" prefHeight="500.0" prefWidth="452.0" style="-fx-background-color: #cd2122;">
+         <children>
+            <JFXButton layoutX="117.0" layoutY="371.0" text="S'inscire" textFill="#cd2122" />
+            <JFXButton fx:id="signin" buttonType="RAISED" layoutX="113.0" layoutY="264.0" onAction="#Inscrir_action" prefHeight="34.0" prefWidth="226.0" style="-fx-background-color: #ddd; -fx-cursor: 'hand';" text="S'inscrire" textFill="#cd2122">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <ImageView fitHeight="68.0" fitWidth="300.0" layoutX="111.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/logo-white.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

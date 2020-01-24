@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="ui-block responsive-flex">
+					<div class="ui-block-title">
+						<div class="h6 title">Tags </div>
+
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+<div class="container">
+	<div >
+
+		<div class=" col-12 row">
+            {% for tag in tags %}
+				<div class="ui-block col-3" >
+					<div  >
+						<div>{{ tag.name ~ " : " }}</div>
+						<div><a href="{{ path('view_tagged_questions', { name: tag.name }) }}">{{ tag.questions|length ~ " questions " }}</a></div>
+					</div>
+				</div>
+
+            {% endfor %}
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

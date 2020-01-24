@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="LoginGUI" cloudDestinationProperty="LoginGUI" uiid="Formlogin" scrollVisible="true" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="4" >
+  <component type="Container" name="Container4" cloudDestinationProperty="Container4" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="4" >
+    <component type="Container" name="Container" cloudDestinationProperty="Container" scrollVisible="true" layout="BoxLayout" boxLayoutAxis="Y" >
+      <component type="Container" name="Container1" cloudDestinationProperty="Container1" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="4" >
+        <component type="Container" name="Container3" cloudDestinationProperty="Container3" layout="BoxLayout" boxLayoutAxis="Y" >
+          <component type="Label" name="Label1" cloudDestinationProperty="Label1" text="Email" >
+          </component>
+          <component type="TextField" name="Login" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" maxSize="200" columns="30" >
+          </component>
+          <component type="Label" name="Label2" cloudDestinationProperty="Label2" text="mot de passe" >
+          </component>
+          <component type="TextField" name="password" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" constraint="65536" maxSize="200" columns="30" >
+          </component>
+        </component>
+        <component type="Container" name="Container5" cloudDestinationProperty="Container5" layout="BoxLayout" boxLayoutAxis="Y" >
+        </component>
+      </component>
+      <component type="Button" name="Button" cloudDestinationProperty="Button" scrollVisible="false" text="Se Connecter" >
+      </component>
+      <component type="Button" name="register" cloudDestinationProperty="Button1" text="S'inscrire" >
+      </component>
+      <component type="Container" name="Container2" cloudDestinationProperty="Container2" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="0" >
+        <component type="Label" name="reset" cloudDestinationProperty="reset" text="Mot de passe oublier ?" >
+        </component>
+      </component>
+    </component>
+  </component>
+</component>

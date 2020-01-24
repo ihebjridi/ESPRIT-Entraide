@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Covoiturage | Esprit Entre'aide®</title>
+
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap-reboot.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap-grid.css') }}">
+
+    <!-- Main Styles CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/fonts.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/dropzone.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/sweetalert.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('js/EasyAutocomplete-1.3.5/easy-autocomplete.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('js/EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css') }}">
+
+    <!-- Main Font -->
+    <script src="{{ asset('js/webfontloader.min.js') }}"></script>
+
+
+
+</head>
+<body>
+
+<!-- Fixed Sidebar Left -->
+
+<div class="fixed-sidebar">
+    <div class="fixed-sidebar-left sidebar--small" id="sidebar-left">
+
+        <a href="/" class="logo">
+            <div class="img-wrap">
+                <img src="{{ asset('img/logo.png') }}" alt="Esprit Entr'aide">
+            </div>
+        </a>
+
+        <div class="mCustomScrollbar" data-mcs-theme="dark">
+            <ul class="left-menu menu">
+                <li>
+                    <a href="{{ path('Esprit_col') }}" alt="seif" class="js-sidebar-open inline-items ">
+                        <svg class="olymp-menu-icon left-menu-icon itemactive" data-toggle="tooltip"
+                             data-placement="right"
+                             data-original-title="OPEN MENU">
+                            <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-menu-icon') }}"></use>
+                        </svg>
+                        <span class="style1">Collocation</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="03-Newsfeed.html">
+                        <svg class="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="NEWSFEED">
+                            <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-newsfeed-icon') }}"></use>
+                            <span class="style1">Covoiturage</span>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="16-FavPagesFeed.html">
+                        <svg class="olymp-star-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="FAV PAGE">
+                            <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-star-icon') }}"></use>
+                            <span class="style1">Objet-perdu</span>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="17-FriendGroups.html">
+                        <svg class="olymp-happy-faces-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="FRIEND GROUPS">
+                            <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-happy-faces-icon') }}"></use>
+                            <span class="style1" style="margin-left: -5px;">Tutorat</span>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="18-MusicAndPlaylists.html">
+                        <svg class="olymp-headphones-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="MUSIC&PLAYLISTS">
+                            <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-headphones-icon') }}"></use>
+                            <span class="style1" style="margin-left: -3px;">Event</span>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="fixed-sidebar-left sidebar--large" id="sidebar-left-1">
+        <a href="02-ProfilePage.html" class="logo">
+            <div class="img-wrap">
+                <img src="{{ asset('img/logo.png') }}" alt="Olympus">
+            </div>
+            <div class="title-block">
+                <h6 class="logo-title">Esprit Entr'aide</h6>
+            </div>
+        </a>
+
+        <div class="mCustomScrollbar" data-mcs-theme="dark">
+            <ul class="left-menu">
+                <li>
+                    <a href="#" class="js-sidebar-open">
+                        <svg class="olymp-close-icon left-menu-icon">
+                            <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-close-icon') }}"></use>
+                        </svg>
+                        <span class="left-menu-title">Collapse Menu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="03-Newsfeed.html">
+                        <svg class="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="NEWSFEED">
+                            <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-newsfeed-icon') }}"></use>
+                        </svg>
+                        <span class="left-menu-title">Newsfeed</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="16-FavPagesFeed.html">
+                        <svg class="olymp-star-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="FAV PAGE">
+                            <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-star-icon') }}"></use>
+                        </svg>
+                        <span class="left-menu-title">Fav Pages Feed</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="profile-completion">
+
+                <div class="skills-item">
+                    <div class="skills-item-info">
+                        <span class="skills-item-title">Profile Completion</span>
+                        <span class="skills-item-count"><span class="count-animate" data-speed="1000"
+                                                              data-refresh-interval="50" data-to="76"
+                                                              data-from="0"></span><span class="units">76%</span></span>
+                    </div>
+                    <div class="skills-item-meter">
+                        <span class="skills-item-meter-active bg-primary" style="width: 76%"></span>
+                    </div>
+                </div>
+
+                <span>Complete <a href="#">your profile</a> so people can know more about you!</span>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ... end Fixed Sidebar Left -->
+
+<!-- Profile Settings Responsive -->
+
+<div class="profile-settings-responsive" id="top">
+
+    <a href="#" class="js-profile-settings-open profile-settings-open">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </a>
+    <div class="mCustomScrollbar" data-mcs-theme="dark">
+        <div class="ui-block">
+            <div class="your-profile">
+                <div class="ui-block-title ui-block-title-small">
+                    <h6 class="title">Your PROFILE</h6>
+                </div>
+
+                <div id="accordion1" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne-1">
+                            <h6 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne-1"
+                                   aria-expanded="true" aria-controls="collapseOne">
+                                    Profile Settings
+                                    <svg class="olymp-dropdown-arrow-icon">
+                                        <use xlink:href="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use>
+                                    </svg>
+                                </a>
+                            </h6>
+                        </div>
+
+                        <div id="collapseOne-1" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                            <ul class="your-profile-menu">
+                                <li>
+                                    <a href="28-YourAccount-PersonalInformation.html">Personal Information</a>
+                                </li>
+                                <li>
+                                    <a href="29-YourAccount-AccountSettings.html">Account Settings</a>
+                                </li>
+                                <li>
+                                    <a href="30-YourAccount-ChangePassword.html">Change Password</a>
+                                </li>
+                                <li>
+                                    <a href="31-YourAccount-HobbiesAndInterests.html">Hobbies and Interests</a>
+                                </li>
+                                <li>
+                                    <a href="32-YourAccount-EducationAndEmployement.html">Education and Employement</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ui-block-title">
+                    <a href="33-YourAccount-Notifications.html" class="h6 title">Notifications</a>
+                    <a href="#" class="items-round-little bg-primary">8</a>
+                </div>
+                <div class="ui-block-title">
+                    <a href="34-YourAccount-ChatMessages.html" class="h6 title">Chat / Messages</a>
+                </div>
+                <div class="ui-block-title">
+                    <a href="35-YourAccount-FriendsRequests.html" class="h6 title">Friend Requests</a>
+                    <a href="#" class="items-round-little bg-blue">4</a>
+                </div>
+                <div class="ui-block-title ui-block-title-small">
+                    <h6 class="title">FAVOURITE PAGE</h6>
+                </div>
+                <div class="ui-block-title">
+                    <a href="36-FavPage-SettingsAndCreatePopup.html" class="h6 title">Create Fav Page</a>
+                </div>
+                <div class="ui-block-title">
+                    <a href="36-FavPage-SettingsAndCreatePopup.html" class="h6 title">Fav Page Settings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ... end Profile Settings Responsive -->
+
+
+<!-- Fixed Sidebar Left -->
+
+<div class="fixed-sidebar fixed-sidebar-responsive">
+
+    <div class="fixed-sidebar-left sidebar--small" id="sidebar-left-responsive">
+        <a href="#" class="logo js-sidebar-open">
+            <img src="{{ asset('img/logo.png') }}" alt="Olympus">
+        </a>
+
+    </div>
+
+    <div class="fixed-sidebar-left sidebar--large" id="sidebar-left-1-responsive">
+        <a href="#" class="logo">
+            <div class="img-wrap">
+                <img src="{{ asset('img/logo.png') }}" alt="Olympus">
+            </div>
+
+        </a>
+
+        <div class="mCustomScrollbar" data-mcs-theme="dark">
+
+            <div class="control-block">
+                <div class="author-page author vcard inline-items">
+                    <div class="author-thumb">
+                        <img alt="author" src="{{ asset('img/author-page.jpg') }}" class="avatar">
+                        <span class="icon-status online"></span>
+                    </div>
+                    <a href="02-ProfilePage.html" class="author-name fn">
+                        <div class="author-title">
+                            James Spiegel
+                            <svg class="olymp-dropdown-arrow-icon">
+                                <use xlink:href="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use>
+                            </svg>
+                        </div>
+                        <span class="author-subtitle">SPACE COWBOY</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="ui-block-title ui-block-title-small">
+                <h6 class="title">MAIN SECTIONS</h6>
+            </div>
+
+            <ul class="left-menu">
+                <li>
+                    <a href="#" class="js-sidebar-open">
+                        <svg class="olymp-close-icon left-menu-icon">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-close-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Collapse Menu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mobile-index.html">
+                        <svg class="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="NEWSFEED">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Newsfeed</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Mobile-28-YourAccount-PersonalInformation.html">
+                        <svg class="olymp-star-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="FAV PAGE">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-star-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Fav Pages Feed</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mobile-29-YourAccount-AccountSettings.html">
+                        <svg class="olymp-happy-faces-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="FRIEND GROUPS">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-happy-faces-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Friend Groups</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Mobile-30-YourAccount-ChangePassword.html">
+                        <svg class="olymp-headphones-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="MUSIC&PLAYLISTS">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-headphones-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Music & Playlists</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Mobile-31-YourAccount-HobbiesAndInterests.html">
+                        <svg class="olymp-weather-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="WEATHER APP">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-weather-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Weather App</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Mobile-32-YourAccount-EducationAndEmployement.html">
+                        <svg class="olymp-calendar-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="CALENDAR AND EVENTS">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-calendar-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Calendar and Events</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Mobile-33-YourAccount-Notifications.html">
+                        <svg class="olymp-badge-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="Community Badges">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-badge-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Community Badges</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Mobile-34-YourAccount-ChatMessages.html">
+                        <svg class="olymp-cupcake-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="Friends Birthdays">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-cupcake-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Friends Birthdays</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Mobile-35-YourAccount-FriendsRequests.html">
+                        <svg class="olymp-stats-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="Account Stats">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-stats-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Account Stats</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="olymp-manage-widgets-icon left-menu-icon" data-toggle="tooltip"
+                             data-placement="right" data-original-title="Manage Widgets">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-manage-widgets-icon"></use>
+                        </svg>
+                        <span class="left-menu-title">Manage Widgets</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="ui-block-title ui-block-title-small">
+                <h6 class="title">YOUR ACCOUNT</h6>
+            </div>
+
+            <ul class="account-settings">
+                <li>
+                    <a href="#">
+
+                        <svg class="olymp-menu-icon">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-menu-icon"></use>
+                        </svg>
+
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="olymp-star-icon left-menu-icon" data-toggle="tooltip" data-placement="right"
+                             data-original-title="FAV PAGE">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-star-icon"></use>
+                        </svg>
+
+                        <span>Create Fav Page</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="olymp-logout-icon">
+                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-logout-icon"></use>
+                        </svg>
+
+                        <span>Log Out</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="ui-block-title ui-block-title-small">
+                <h6 class="title">About Olympus</h6>
+            </div>
+
+            <ul class="about-olympus">
+                <li>
+                    <a href="#">
+                        <span>Terms and Conditions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>FAQs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Careers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<!-- ... end Fixed Sidebar Left -->
+
+
+<!-- Fixed Sidebar Right-Responsive -->
+
+<div class="fixed-sidebar right fixed-sidebar-responsive">
+
+    <div class="fixed-sidebar-right sidebar--small" id="sidebar-right-responsive">
+
+        <a href="#" class="olympus-chat inline-items js-chat-open">
+            <svg class="olymp-chat---messages-icon">
+                <use xlink:href="svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use>
+            </svg>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ... end Fixed Sidebar Right-Responsive -->
+
+
+<!-- Header-BP -->
+{% include  ('IndexBundle:public:header.html.twig') %}
+<!-- ... end Header-BP -->
+
+
+<!-- ... end Responsive Header-BP -->
+<div class="header-spacer header-spacer-small"></div>
+
+<!-- Main Header Badges -->
+
+<div class="main-header">
+    <div class="content-bg-wrap">
+        <div class="content-bg bg-account"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 m-auto col-md-8 col-sm-12 col-xs-12">
+                <div class="main-header-content">
+                    <h1>Covoiturage</h1>
+                    <p>Ceci est un test pour la page de covoiturage</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ... end Main Header Badges -->
+
+
+<!-- Your Account Personal Information -->
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-xl-9 order-xl-2 col-lg-9 order-lg-2 col-md-12 order-md-1 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+
+{% block content %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="ui-block">
+
+
+                            <!-- Forums Table -->
+
+                            <table class="forums-table" id="opTable">
+
+                                <thead>
+
+                                <tr>
+
+                                    <th class="forum">
+                                        Titre de l'annonce
+                                    </th>
+
+
+                                    <th class="freshness">
+                                        contenu
+                                    </th>
+                                    <th class="freshness">
+                                        action
+                                    </th>
+
+
+
+
+                                </tr>
+
+                                </thead>
+
+
+
+
+                                </tbody>
+                            </table>
+
+                            <!-- ... end Forums Table -->
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            {% endblock %}
+
+        </div>
+
+
+        <div class="col-xl-3 order-xl-1 col-lg-3 order-lg-1 col-md-12 order-md-2 col-sm-12 col-xs-12 responsive-display-none">
+            <div class="ui-block">
+
+                <!-- Your Profile  -->
+
+                <div class="your-profile">
+                    <div class="ui-block-title ui-block-title-small">
+                        <center class="title">-- Menu --</center>
+                    </div>
+
+                    <div id="accordion1" role="tablist" aria-multiselectable="true">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne-1">
+                                <h6 class="mb-0">
+                                    <a data-toggle="collapse" style="color: #cd2122;" data-parent="#accordion"
+                                       href="{{ path('Esprit_cov') }}"
+                                       aria-expanded="true" aria-controls="collapseOne">
+                                        les covoiturages
+                                        <svg class="olymp-dropdown-arrow-icon">
+                                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </h6>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="accordion1" role="tablist" aria-multiselectable="true">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne-1">
+
+                                <h6 class="mb-0">
+                                    <a href="{{ path('Esprit_cov_my_ads') }}">
+                                        Mes Annonces
+                                        <svg class="olymp-dropdown-arrow-icon">
+                                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </h6>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="accordion1" role="tablist" aria-multiselectable="true">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne-1">
+                                <h6 class="mb-0">
+                                    <a href="{{ path('Esprit_cov_my_request') }}">
+                                        mes Demandes
+                                        <svg class="olymp-dropdown-arrow-icon">
+                                            <use xlink:href="svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use>
+                                        </svg>
+                                    </a>
+                                </h6>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ... end Your Profile  -->
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ... end Your Account Personal Information -->
+
+
+<!-- Window-popup-CHAT for responsive min-width: 768px -->
+
+<div class="ui-block popup-chat popup-chat-responsive">
+    <div class="ui-block-title">
+        <span class="icon-status online"></span>
+        <h6 class="title">Chat</h6>
+        <div class="more">
+            <svg class="olymp-three-dots-icon">
+                <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-three-dots-icon') }}"></use>
+            </svg>
+            <svg class="olymp-little-delete js-chat-open">
+                <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-little-delete') }}"></use>
+            </svg>
+        </div>
+    </div>
+    <div class="mCustomScrollbar">
+        <ul class="notification-list chat-message chat-message-field">
+            <li>
+                <div class="author-thumb">
+                    <img src="{{ asset('img/avatar14-sm.jpg') }}" alt="author" class="mCS_img_loaded">
+                </div>
+                <div class="notification-event">
+                    <span class="chat-message-item">Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks</span>
+                    <span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:10pm</time></span>
+                </div>
+            </li>
+
+            <li>
+                <div class="author-thumb">
+                    <img src="{{ asset('img/author-page.jpg') }}" alt="author" class="mCS_img_loaded">
+                </div>
+                <div class="notification-event">
+                    <span class="chat-message-item">Don’t worry Mathilda!</span>
+                    <span class="chat-message-item">I already bought everything</span>
+                    <span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:29pm</time></span>
+                </div>
+            </li>
+
+            <li>
+                <div class="author-thumb">
+                    <img src="{{ asset('img/avatar14-sm.jpg') }}" alt="author" class="mCS_img_loaded">
+                </div>
+                <div class="notification-event">
+                    <span class="chat-message-item">Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks</span>
+                    <span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:10pm</time></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <form class="need-validation">
+
+        <div class="form-group label-floating is-empty">
+            <label class="control-label">Press enter to post...</label>
+            <textarea class="form-control" placeholder=""></textarea>
+            <div class="add-options-message">
+                <a href="#" class="options-message">
+                    <svg class="olymp-computer-icon">
+                        <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-computer-icon') }}"></use>
+                    </svg>
+                </a>
+                <div class="options-message smile-block">
+
+                    <svg class="olymp-happy-sticker-icon">
+                        <use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-happy-sticker-icon') }}"></use>
+                    </svg>
+
+                    <ul class="more-dropdown more-with-triangle triangle-bottom-right">
+                        <li>
+                            <a href="#">
+                                <img src="{{ asset('img/icon-chat1.png') }}" alt="icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="{{ asset('img/icon-chat2.png') }}" alt="icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
+
+<!-- ... end Window-popup-CHAT for responsive min-width: 768px -->
+
+
+<a class="back-to-top" href="#top">
+    <img src="{{ asset('svg-icons/back-to-top.svg') }}" alt="arrow" class="back-icon">
+</a>
+
+
+<!-- line modal -->
+<div class="modal fade" id="AjoutDemandeModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                {#<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>#}
+                <h3 class="modal-title" id="lineModalLabel">Ajouter une demande </h3>
+            </div>
+            <form name="demandFrm" id="demandeFrm">
+                <div class="modal-body">
+
+                    <!-- content goes here -->
+
+                    <div class="form-group">
+                        <label>Titre de l'annonce:</label>
+                        <input type="text" maxlength="40" class="form-control" name="title" placeholder="Enter le titre d'annonce"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description de l'annonce</label>
+                        <textarea class="form-control" name="description" style="    overflow: hidden;"
+                                  placeholder="Saisir une description" required></textarea>
+                    </div>
+
+
+                    {#<form action="{{ path('uploadimagefake') }}" class="dropzone">#}
+                    {#<div class="fallback">#}
+                    {#<input name="file" type="file" multiple />#}
+                    {#</div>#}
+                    {#</form>#}
+
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                        <div class="btn-group ">
+                            <button type="submit" class="btn btn-success " onclick="addDemande()">Ajouter</button>
+                        </div>
+
+                    </div>
+                    <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                        <div class="btn-group ">
+                            <button type="button" id="delImage" class="btn btn-danger " data-dismiss="modal"
+                                    role="button">Cancel
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- line modal -->
+<div class="modal fade" id="AjoutAnnonceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                {#<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>#}
+                <h3 class="modal-title" id="lineModalLabel">Ajouter un annonce </h3>
+            </div>
+
+            <div class="modal-body">
+                <form name="annonceFrm" id="annonceFrm">
+                    <!-- content goes here -->
+
+                    <div class="form-group">
+                        <label>Titre de l'annonce:</label>
+                        <input type="text" class="form-control" maxlength="40" name="title" placeholder="Enter le titre d'annonce"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description de l'annonce</label>
+                        <textarea class="form-control" style="overflow: hidden;" name="description" required
+                                  placeholder="Saisir une description"></textarea>
+                    </div>
+
+
+                    <div class="dropzone my-dropzone" id="picture" action="{{ path('uploadimagefake') }}">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                    <div class="btn-group ">
+                        <button type="submit" class="btn btn-success " onclick="addAnnonce()">Ajouter</button>
+                    </div>
+
+                </div>
+                <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                    <div class="btn-group ">
+                        <button type="button" id="delImage" class="btn btn-danger " data-dismiss="modal" role="button">
+                            Cancel
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- JS Scripts -->
+{% include  ('IndexBundle:public:communFiles.html.twig') %}
+
+<script src="{{ asset('js/EasyAutocomplete-1.3.5/jquery.easy-autocomplete.min.js') }}"></script>
+
+<script src="{{ asset('controller/carpooling/carpooling.js') }}"></script>
+
+</body>
+</html>

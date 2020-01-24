@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="UpdateProfile" cloudDestinationProperty="UpdateProfile" uiid="formupdate" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="4" >
+  <component type="Container" name="Container1" cloudDestinationProperty="Container1" layout="BoxLayout" boxLayoutAxis="Y" >
+    <component type="Container" name="Container4" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="X" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" uiid="Label1" text="Nom                                 " >
+      </component>
+      <component type="TextField" name="Nom" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" >
+      </component>
+    </component>
+    <component type="Container" name="Container3" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="X" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" uiid="Label1" text="Prenom                            " >
+      </component>
+      <component type="TextField" name="lastname" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" >
+      </component>
+    </component>
+    <component type="Container" name="Container2" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="X" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" uiid="Label1" text="Age                                   " >
+      </component>
+      <component type="TextField" name="age" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" >
+      </component>
+    </component>
+    <component type="Container" name="Container" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="X" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" uiid="Label1" text="Numero de Telephone " >
+      </component>
+      <component type="TextField" name="phonenumber" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" >
+      </component>
+    </component>
+    <component type="Container" name="Container5" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="X" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" uiid="Label1" text="Modifier la photo de profil" >
+      </component>
+      <component type="Button" name="Addimage" cloudDestinationProperty="Addimage" text="Ajouter photo" >
+      </component>
+    </component>
+    <component type="Button" name="Button" cloudDestinationProperty="Button" text="Mise &#xe0; jour du profil" >
+    </component>
+  </component>
+</component>

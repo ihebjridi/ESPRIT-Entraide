@@ -1,0 +1,139 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="ui-block responsive-flex">
+
+                    <div class="ui-block-title">
+
+                        <div class="h6 title"> {{ question.title }}<br/><small >{{ " asked " ~ question.createdAt|date('d M Y') ~ " at " ~ question.createdAt|date("H:i") }}
+                            </small>
+                        </div>
+
+                        <form class="w-search">
+                            <div class="form-group with-button" style="float:right;">
+                                {% if question.user == app.user %}
+                                    <div class="flex-end">
+                                        <div class="edit-question-button">
+                                            <a href="{{ path('edit_question', { id: question.id }) }}"><i class="fa fa-lg fa-pencil" aria-hidden="true"></i></a>
+
+                                            <a href="{{ path('delete_question', { id: question.id }) }}"><i class="fa fa-lg fa-times" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                {% elseif (app.user) and ("ROLE_ADMIN" in app.user.roles) %}
+                                    <div class="flex-end">
+                                        <div class="delete-question-button">
+                                            <a href="{{ path('delete_question', { id: question.id }) }}"><i class="fa fa-lg fa-times" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div></div>
+                                {% endif %}
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <div class="col-12" style="    text-align: left;margin: 15px;">
+                        <div>{{ question.content }}</div>
+
+                        <div>
+                            {% for tag in question.tags %}
+                                <a href="{{ path('view_tagged_questions', { name: tag.name }) }}" class="tags">{{ tag.name }}</a>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+
+
+                <div style="float: right;color: red;">{{ question.answers|length ~ " answer(s) " }}</div><br/>
+
+                    {% for answer in question.answers %}
+                <div class="ui-block" id="">
+
+                    <article class="hentry post video" style="    padding-bottom: 0px;">
+                        <div class="post__author author vcard inline-items">
+                            <div class="author-date col-12">
+                                <small style="float: right;">           {% if answer.user == app.user %}
+
+   <div class="edit-question-button">
+                                    <a href="{{ path('edit_answer', { id: answer.id }) }}"><i class="fa fa-lg fa-pencil" aria-hidden="true"></i></a>
+
+                                    <a href="{{ path('delete_answer', { id: answer.id }) }}"><i class="fa fa-lg fa-times" aria-hidden="true"></i></a>
+
+   </div>
+                                {% elseif (app.user) and ("ROLE_ADMIN" in app.user.roles) %}
+
+
+                                        <a href="{{ path('delete_answer', { id: answer.id }) }}"><i class="fa fa-lg fa-times" aria-hidden="true"></i></a>
+
+
+                                {% else %}
+                                <br/>
+                                {% endif %}</small>
+                                <p class="col-12"> {{ answer.content }}
+                                <small class="creation-date-answers" style="float: right;">
+
+                                    {{ " answered " ~ answer.createdAt|date("d M Y") ~ " at " ~ answer.createdAt|date("H:i") }}
+
+                                </small>
+
+                                </p>
+                                <div class="" style="float: right;">
+
+                                    <div id="votes">
+                                        <a id="vote-up" style=" background-color: #cd2122;    font-size: 12px; padding: 7px; border-color: #cd2122;" href="{{ path ( 'answer_vote', { id: answer.id, vote: "▲" } ) }}" class="btn btn-outline-success">+</a>
+                                        <span class="success label">{{ answer.vote }}</span>
+                                        <a id="vote-down" style=" background-color: #cd2122;     font-size: 12px;padding: 7px; border-color: #cd2122;" href="{{ path ( 'answer_vote', { id: answer.id, vote: "▼" } ) }}" class="btn btn-outline-success">-</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </article>
+                </div>
+                    {% endfor %}
+
+
+                        <div >
+
+                            <div class="ui-block"  style="padding: 34px;" id="">
+                {{ form(form) }}
+                            </div>
+                        </div>
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

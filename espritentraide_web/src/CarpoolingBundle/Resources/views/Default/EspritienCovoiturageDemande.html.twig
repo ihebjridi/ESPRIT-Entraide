@@ -1,0 +1,63 @@
+{% extends "CarpoolingBundle:Default:layout.html.twig" %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="ui-block">
+
+
+                    <!-- Forums Table -->
+
+                    <table class="forums-table" id="opTable">
+
+                        <thead>
+
+                        <tr>
+
+                            <th class="forum">
+                                Titre de l'annonce
+                            </th>
+
+
+                            <th class="freshness">
+                                contenu
+                            </th>
+                            <th class="freshness">
+                                action
+                            </th>
+
+
+
+
+                        </tr>
+
+                        </thead>
+<tbody>
+
+{% for cov in covs %}
+    <tr>
+        <td> {{ cov.title }}</td>
+        <td> {{ cov.description  }}</td>
+        <td><a href="{{ path('Espritien_modif_demandeCov',{'id':cov.id}) }}">modifier</a>
+            <a href="{{ path('supprimer_d_cov',{'id':cov.id}) }}">supprimer </a></td>
+
+    </tr>
+{% endfor %}
+</tbody>
+
+
+
+
+                    </table>
+
+                    <!-- ... end Forums Table -->
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}

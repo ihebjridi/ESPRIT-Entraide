@@ -1,0 +1,67 @@
+Esprit_cov:
+    path:     /covoiturage
+    defaults: { _controller: CarpoolingBundle:Default:espritienCovoiturage }
+lost_object_homepage:
+    path:     /
+    defaults: { _controller: CarpoolingBundle:Default:index }
+Mesannonce_page:
+    path:     /covoiturages/mes-annonces
+    defaults: { _controller: CarpoolingBundle:Default:annonce }
+Mesdemandes_page:
+    path:     /covoiturages/mes-demandes
+    defaults: { _controller: CarpoolingBundle:Default:demande }
+add_request_cov:
+    path:     /add_request_cov
+    defaults: { _controller: CarpoolingBundle:Default:addRequest }
+add_ads_cov:
+    path:     /add_ads_cov
+    defaults: { _controller: CarpoolingBundle:Default:addAds }
+get_cov:
+    path:     /get_cov
+    defaults: { _controller: CarpoolingBundle:Default:list }
+Esprit_cov_my_ads:
+    path:     /cov_my_ads
+    defaults: { _controller: CarpoolingBundle:Default:lesAnnonces }
+Esprit_cov_my_request:
+    path:     /cov_my_request
+    defaults: { _controller: CarpoolingBundle:Default:lesDemandes }
+Admin_cov_the_request:
+    path:     /admin_les_demandes
+    defaults: { _controller: CarpoolingBundle:Default:AdminDemande }
+Admin_cov_the_offers:
+    path:     /admin_les_annonces
+    defaults: { _controller: CarpoolingBundle:Default:AdminAnnonce }
+Espritien_modif_annonceCov:
+    path:     /Update_Annonce/{id}
+    defaults: { _controller: CarpoolingBundle:Default:espritien_modif_annonce }
+Espritien_modif_demandeCov:
+    path:     /Update_Demande/{id}
+    defaults: { _controller: CarpoolingBundle:Default:espritien_modif_demande }
+Admin_valider_demandecov:
+    path:     /valider_DemandeCov/{id}
+    defaults: { _controller: CarpoolingBundle:Default:valider_demande }
+Admin_valider_annoncecov:
+    path:     /valider_AnnonceCov/{id}
+    defaults: { _controller: CarpoolingBundle:Default:valider_annonce }
+demande_cov_valide:
+    path:     /demande_cov_valide
+    defaults: { _controller: CarpoolingBundle:Default:DemandesValide }
+annonce_cov_valide:
+    path:     /annonce_cov_valide
+    defaults: { _controller: CarpoolingBundle:Default:AnnonceValide }
+annuler_annonce_cov:
+    path:     /annuler_cov/{id}
+    defaults: { _controller: CarpoolingBundle:Default:annulerAnnonce }
+annuler_demande_cov:
+    path:     /annuler_cov/{id}
+    defaults: { _controller: CarpoolingBundle:Default:annulerDemande }
+stat:
+    path:     /stat
+    defaults: { _controller: CarpoolingBundle:Default:statCov }
+supprimer_a_cov:
+    path:     /supprimerCov/{id}
+    defaults: { _controller: CarpoolingBundle:Default:supprimer_annonce }
+supprimer_d_cov:
+    path:     /supprimerCov/{id}
+    defaults: { _controller: CarpoolingBundle:Default:supprimer_demande }
+

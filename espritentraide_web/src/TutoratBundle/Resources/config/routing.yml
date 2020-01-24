@@ -1,0 +1,3 @@
+tutorat_homepage:
+    path:     /t
+    defaults: { _controller: TutoratBundle:Default:index }

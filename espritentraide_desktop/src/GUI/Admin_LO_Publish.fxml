@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Admin_LO_PublishController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="251.0" style="-fx-background-color: #cd2122;">
+         <children>
+            <JFXButton fx:id="btn_all" buttonType="RAISED" layoutY="183.0" onAction="#All_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Toutes les annonces" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fx:id="logo" fitHeight="71.0" fitWidth="208.0" layoutX="22.0" layoutY="54.0" onMouseClicked="#logo_action" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/logo-white.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="25.0" layoutY="118.0" prefWidth="200.0" style="-fx-background-color: #fff;" />
+            <JFXButton fx:id="btn_attente" buttonType="RAISED" layoutY="230.0" onAction="#AllAttente_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Les annonces en attentes" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn_publie" buttonType="RAISED" layoutX="1.0" layoutY="277.0" onAction="#AllPublie_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="les annonces publiées" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn_annule" buttonType="RAISED" layoutX="1.0" layoutY="324.0" onAction="#AllAnnule_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="les annonces annulées" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="251.0" layoutY="68.0" prefHeight="84.0" prefWidth="682.0" style="-fx-background-color: #7e7e7e;">
+         <children>
+            <JFXTextField fx:id="search" focusColor="#ffffff00" layoutX="140.0" layoutY="17.0" prefHeight="32.0" prefWidth="361.0" promptText="Chercher ...." unFocusColor="WHITE">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXTextField>
+            <ImageView layoutX="93.0" layoutY="18.0">
+               <image>
+                  <Image url="@../Resources/Search%20Property_32px.png" />
+               </image>
+            </ImageView>
+            <JFXCheckBox fx:id="checkTitle" layoutX="519.0" layoutY="7.0" onAction="#checkTitle_action" selected="true" text="Par titre" textFill="WHITE" unCheckedColor="WHITE" />
+            <JFXCheckBox fx:id="checkDesc" layoutX="519.0" layoutY="31.0" onAction="#checkDesc_action" text="Par description" textFill="WHITE" unCheckedColor="WHITE" />
+            <JFXCheckBox fx:id="checkUser" layoutX="519.0" layoutY="56.0" onAction="#checkUser_action" text="Par utilisateur" textFill="WHITE" unCheckedColor="WHITE" />
+            <Text fx:id="msgerr" fill="RED" layoutX="141.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisissez une option de recherche*" visible="false" />
+         </children>
+      </AnchorPane>
+      <Text layoutX="284.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Objet-perdu (Espace administrateur)">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Label layoutX="367.0" layoutY="41.0" text="Les annonces publiées">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="259.0" layoutY="159.0" prefHeight="330.0" prefWidth="667.0">
+         <columns>
+            <TableColumn fx:id="user" prefWidth="104.0" text="Utilisateur" />
+            <TableColumn fx:id="title" prefWidth="97.0" text="Title" />
+            <TableColumn fx:id="description" prefWidth="130.0" text="Description" />
+            <TableColumn fx:id="type" minWidth="0.0" prefWidth="126.0" text="Type" />
+            <TableColumn fx:id="created_at" prefWidth="131.0" text="Cree le" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btn_stat" buttonType="RAISED" layoutX="1.0" layoutY="371.0" onAction="#Stat_action" prefHeight="46.0" prefWidth="251.0" style="-fx-background-color: #d22324ba;" text="Statistique" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

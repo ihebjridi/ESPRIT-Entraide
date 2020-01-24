@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>Esprit Entre'aide®</title>
+
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Main Font -->
+    <script src="{{ asset('js/webfontloader.min.js') }}"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap-reboot.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap-grid.css') }}">
+
+    <!-- Main Styles CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/fonts.min.css') }}">
+
+
+</head>
+
+<body class="body-bg-white" id="top">
+<div class="landing-page">
+    <div class="content-bg-wrap" style="filter: inherit !important;">
+        <div class="content-bg"></div>
+    </div>
+
+    <div class="container">
+        <div class="row display-flex" style="padding-top: 75px !important;padding-bottom: 75px !important;">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="landing-content">
+                    <a href="{{ path('index_homepage') }}"><img style="max-width: 44%;" src="{{ asset('img/logo-white.png') }}" alt="Esprit Entr'aide">
+                    </a>
+                        <h2>Vous n'avez besoin que d'un compte</h2>
+                    <h4>Vous n'avez besoin que d'un compte gratuit pour accéder à tous les services Esprit Entr'aide.</h4>
+
+
+
+                </div>
+            </div>
+
+            <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12" >
+
+                <!-- Login-Registration Form  -->
+
+
+                <div class="registration-login-form" style="padding-left: 2px;">
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home" role="tabpanel" data-mh="log-tab">
+
+                            <div class="title h6">Créer votre compte Esprit Entr'aide</div>
+
+
+
+
+                            <form class="content" action="{{ path('fos_user_registration_register') }}"  method="POST">
+
+                                <div class="row">
+
+                                        <div class="col-lg-12 ">
+                                            <div class="form-group label-floating is-empty">
+                                        {{ form_widget(form.email, { 'attr': {'class': 'form-control', 'placeholder': 'form.email'|trans } }) }}
+                                        {{ form_errors(form.email) }}
+                                            </div>
+                                        </div>
+
+
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group label-floating is-empty">
+                                        {{ form_widget(form.username, { 'attr': {'class': 'form-control', 'placeholder': 'form.username'|trans } }) }}
+                                        {{ form_errors(form.username) }}
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group label-floating is-empty">
+                                        {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'form-control', 'placeholder': 'form.password'|trans } }) }}
+                                        {{ form_errors(form.plainPassword.first) }}
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group label-floating is-empty">
+                                        {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'form-control', 'placeholder': 'form.password_confirmation'|trans } }) }}
+                                        {{ form_errors(form.plainPassword.second) }}
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-12 ">
+                                        <div class="form-group label-floating is-empty">
+                                        {{ form_rest(form) }}
+                                        </div>
+                                    </div>
+
+
+                                    <input class="btn btn-purple btn-lg full-width" style="cursor: pointer;" type="submit" id="_submit" name="_submit" value="Créer un compte" />
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane" id="profile" role="tabpanel" data-mh="log-tab">
+                            <div class="title h6">Connectez-vous a votre compte</div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ... end Login-Registration Form  -->        </div>
+        </div>
+
+    </div>
+    <img class="img-bottom" style="bottom: 0 !important;    position: absolute;   left: 50%; transform: translate(-50%,0);   margin: 0 !important;" src="{{ asset('img/group-bottom.png') }}" alt="friends">
+</div>
+
+
+<!-- JS Scripts -->
+{% include  ('IndexBundle:public:communFiles.html.twig') %}
+
+</body>
+</html>

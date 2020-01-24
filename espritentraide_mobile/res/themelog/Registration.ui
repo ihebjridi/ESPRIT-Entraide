@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="Registration" cloudDestinationProperty="Registration" uiid="Formsignup" focusable="false" layout="FlowLayout" flowLayoutFillRows="false" flowLayoutAlign="4" flowLayoutValign="4" >
+  <component type="Container" name="Container1" cloudDestinationProperty="Container1" layout="BoxLayout" boxLayoutAxis="Y" >
+    <component type="Container" name="Container4" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="X" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" text="Nom                                 " >
+      </component>
+      <component type="TextField" name="Nom" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" >
+      </component>
+    </component>
+    <component type="Container" name="Container3" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="X" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" text="Email                                " >
+      </component>
+      <component type="TextField" name="Email" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" >
+      </component>
+    </component>
+    <component type="Container" name="Container2" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="X" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" text="Mot de passe                  " >
+      </component>
+      <component type="TextField" name="password1" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" >
+      </component>
+    </component>
+    <component type="Container" name="Container" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="X" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" text="R&#xe9;p&#xe9;ter le mot de passe" >
+      </component>
+      <component type="TextField" name="password2" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" >
+      </component>
+    </component>
+    <component type="Container" name="Container5" cloudDestinationProperty="Container" layout="BoxLayout" boxLayoutAxis="X" >
+      <component type="Label" name="Label1" cloudDestinationProperty="Label1" text="num&#xe9;ro de t&#xe9;l&#xe9;phone" >
+      </component>
+      <component type="TextField" name="numtel" cloudBoundProperty="text" cloudDestinationProperty="TextField" text="" >
+      </component>
+    </component>
+    <component type="Button" name="Button" cloudDestinationProperty="Button" text="S'inscrire" >
+    </component>
+  </component>
+</component>

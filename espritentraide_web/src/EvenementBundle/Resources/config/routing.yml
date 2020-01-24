@@ -1,0 +1,33 @@
+evenement_homepage:
+    path:     /evenement
+    defaults: { _controller: EvenementBundle:Default:index }
+evenement_myevent:
+    path:     /evenement/mes-evenements
+    defaults: { _controller: EvenementBundle:Default:myEvent }
+evenement_myads:
+    path:     /evenement/mes-annonces
+    defaults: { _controller: EvenementBundle:Default:myAds }
+add_Event:
+    path:     /add_Event
+    defaults: { _controller: EvenementBundle:Default:addEvent }
+get_MyEvent:
+    path:     /get_MyEvent
+    defaults: { _controller: EvenementBundle:Default:getMyEvent }
+get_Event:
+    path:     /get_Event
+    defaults: { _controller: EvenementBundle:Default:getALLEvent }
+get_MyAdsEvent:
+    path:     /get_MyAdsEvent
+    defaults: { _controller: EvenementBundle:Default:getMyAds}
+ParticipEvent:
+    path:     /ParticipEvent
+    defaults: { _controller: EvenementBundle:Default:ParticperEvnt}
+cancel_MyEventads:
+    path:     /cancel_MyEventads
+    defaults: { _controller: EvenementBundle:Default:cancelMyAds}
+get_EventById:
+    path:     /get_EventById
+    defaults: { _controller: EvenementBundle:Default:getEventById}
+update_EventadsById:
+    path:     /update_EventadsById
+    defaults: { _controller: EvenementBundle:Default:updateEventadsById}
